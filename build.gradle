@@ -1,0 +1,61 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.6'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'groovy'
+}
+
+group = 'com.project'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok'
+	
+	// database
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	// groovy
+	implementation 'org.codehaus.groovy:groovy'
+	
+	// gson
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.10'
+	
+	// Json
+    implementation 'org.json:json:20220924'
+	
+	// Jdom2
+	implementation group: 'org.jdom', name: 'jdom2', version: '2.0.6.1'
+	
+	// commons-io
+	implementation 'commons-io:commons-io:2.6'
+	
+	// thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+		
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
