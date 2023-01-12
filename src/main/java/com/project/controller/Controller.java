@@ -239,13 +239,13 @@ public class Controller {
 				}
 			}
 			catch(Exception e) {
-				
-				model.addAttribute("error_name", "ERROR : 데이터 수집 ERROR~!!");
-				model.addAttribute("error_code", "CODE : EF_R_003");
-				model.addAttribute("error_reason", "사유 : 정확한 인증키를 입력해주시기 바랍니다.");
-				model.addAttribute("error_key", "요청하신 Key : "+serviceKey);
-				model.addAttribute("error_page", "요청하신 Page : "+page);
-				return "index";  
+				e.printStackTrace();
+//				model.addAttribute("error_name", "ERROR : 데이터 수집 ERROR~!!");
+//				model.addAttribute("error_code", "CODE : EF_R_003");
+//				model.addAttribute("error_reason", "사유 : 정확한 인증키를 입력해주시기 바랍니다.");
+//				model.addAttribute("error_key", "요청하신 Key : "+serviceKey);
+//				model.addAttribute("error_page", "요청하신 Page : "+page);
+//				return "index";
 
 			}
 		}else if(Requestcategory.equals("행정규칙")) {

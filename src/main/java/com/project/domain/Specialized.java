@@ -2,12 +2,12 @@ package com.project.domain;
 
 /* "JpaRepository"라는 라이브러리를 사용하기 위해 만든 엔티트 클래스로 DB에 생성할 테이블과 그 이름 그리고 각 컬럼 명과 값을 지정 */
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

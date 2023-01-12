@@ -44,10 +44,10 @@ function handleOnInput(el, maxlength) {
     원하는 페이지를 입력하십시오 <input type="number" name="page"  th:value="${page}"/>
     </div>
     <div class="input_content">
-    조회 시작 날짜를 입력하십시오 <input type="date" name="startdate" oninput='handleOnInput(this, 8)'min="2000-01-01" max="2022-12-31" th:value="${startdate}"/>
+    조회 시작 날짜를 입력하십시오 <input type="text" name="startdate" oninput='handleOnInput(this, 8)'min="2000-01-01" max="2022-12-31" th:value="${startdate}"/>
     </div>
     <div class="input_content">
-    조회 종료 날짜를 입력하십시오 <input type="date" name="enddate" oninput='handleOnInput(this, 8)'min="2000-01-01" max="2022-12-31" th:value="${enddate}"/>
+    조회 종료 날짜를 입력하십시오 <input type="text" name="enddate" oninput='handleOnInput(this, 8)'min="2000-01-01" max="2022-12-31" th:value="${enddate}"/>
     </div>
     <input class="input_submit" type="submit" value="실행"/>
 </form>
