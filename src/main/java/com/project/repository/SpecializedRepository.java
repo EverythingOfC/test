@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.project.domain.Specialized;
 
 public interface SpecializedRepository extends JpaRepository<Specialized, Long>{//JpaRepository< 엔티티 ID 유형>
-//"JpaRepository"라는 인터페스이스를 사용하여 엔티티클레스의 값을 DB에 저장
+    //"JpaRepository"라는 인터페이스를 사용하여 엔티티클레스의 값을 DB에 저장
 }
 

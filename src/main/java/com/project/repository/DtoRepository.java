@@ -30,8 +30,7 @@ public class DtoRepository {
 	
 	public List<Dto> findList(){ 
 		log.debug("findList query= {}", DtoSql.SELECT); //"findList"라는 쿼리문을 DtoSql라는 groovy클래스의 SELECT함수로 지정 
-		
-		
+
 		return namedParameterJdbcTemplate.query(DtoSql.SELECT, EmptySqlParameterSource.INSTANCE
 				, this.dtoRowMapper); 
 		/* JDBC의 명명된 매개변수 쿼리문은 DtoSql이라는 groovy클래스의 SELECT 변수를 통해 "dtoRowMapper"라는 현재 생성된 객체를
